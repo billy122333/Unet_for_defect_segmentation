@@ -27,7 +27,7 @@ training_data_folder
 - Run `Unet.py` to train your own model.
 - We have provide our model in `models/*`
 - We have also provided the usage in `Unet.py` line 93
-  ![alt text](image.png) 
+  ![alt text](./show_img/image.png) 
 ```shell=
 python Unet.py --data_folder path/to/the/training/folder --epochs <training epochs> --batch_size <batch_size> --model_name <the name for the best model to save> 
 
@@ -50,7 +50,7 @@ python Unet.py --data_folder ./data/scratch --model_name best_scratch.keras
 - Run `generate.py` to train your own model.
 - We have provide our model in `models/*`
 - We have also provided the usage in `generate.py` line 59
-![alt text](image-1.png)
+![alt text](./show_img/image-1.png)
 ```shell=
 python generate.py --model_name <the name for the best model to save> --data_folder path/to/the/inference/folder --result_folder path/to/the/result/folder
 
