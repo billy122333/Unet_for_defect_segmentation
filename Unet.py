@@ -90,7 +90,18 @@ def combine_generators(image_gen, mask_gen, brightness_factor_range=(0.8, 1.2)):
         yield x, y
      
      
-     
+"""Usage:
+# train dent dataset
+python Unet.py --data_folder ./data/dent --model_name best_dent.keras
+# train scratch dataset
+python Unet.py --data_folder ./data/scratch --model_name best_scratch.keras 
+
+# test dent dataset
+python Unet.py --model_name best_dent.keras --TRAIN False
+# test scratch dataset
+python Unet.py --model_name best_scratch.keras --TRAIN False
+
+"""
 if __name__ == '__main__':   
     
     args = argparse.ArgumentParser()
@@ -99,7 +110,7 @@ if __name__ == '__main__':
     args.add_argument('--batch_size', type=int, default=4)
     args.add_argument('--model_name', type=str, default='best_scratch.keras')
     args.add_argument('--DEBUG', type=bool, default=False)
-    args.add_argument('--TRAIN', type=bool, default=False)
+    args.add_argument('--TRAIN', type=bool, default=True)
     args = args.parse_args()
     
     # data_path
@@ -107,7 +118,7 @@ if __name__ == '__main__':
     image_directory = f'{data_folder}/img'
     mask_directory = f'{data_folder}/mask'
     test_directory = f'{data_folder}/testing'
-    model_name = 'best_scratch.keras'
+    model_name = args.model_name
 
     # config
     epochs = args.epochs
