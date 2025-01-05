@@ -58,9 +58,9 @@ def image_preprocessing(image_list, img_type, mask = False):
      
 """Usage:
 # test dent dataset
-python test_unet.py --model_name best_dent.keras --data_folder ./data/dent/testing --result_folder ./result/inference/dent
+python generate.py --model_name best_dent.keras --data_folder ./data/dent/testing --result_folder ./result/inference/dent
 # test scratch dataset
-python test_unet.py --model_name best_scratch.keras --data_folder ./data/scratch/testing --result_folder ./result/inference/scratch
+python generate.py --model_name best_scratch.keras --data_folder ./data/scratch/testing --result_folder ./result/inference/scratch
 
 
 """
